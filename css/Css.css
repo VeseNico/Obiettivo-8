@@ -1,0 +1,162 @@
+*{
+  font-family: 'Montserrat', sans-serif;;
+  font-weight: 100;
+}
+
+/*remove scrolbar*/
+html {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Wrapper */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  background-color: #ffffff;
+}
+
+/* Header */
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, rgb(70, 90, 44), #93ac39);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+h1{
+  font-size: 4em;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+
+/* Barra laterale */
+.navb {
+  z-index: 1;
+  top: 0;
+  position: sticky;
+  height: 2vh;
+  background-image: linear-gradient(to right, rgb(70, 90, 44), #93ac39);
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(97, 51, 20);
+}
+.navb a {
+  color: inherit;
+}  
+.naventry{
+  overflow-x: hidden;
+  width: 30vw;
+  text-align: center;
+}
+/* Contenuto principale */
+main {
+  grid-column: 2 / -2;
+  padding: 20px;
+  text-align: center;
+}
+main img {
+    max-height: 100%;
+    max-width: 80%;
+}
+
+#img1{
+    max-width: 80%;
+    max-height: 80%;
+}
+/* Footer */
+footer {
+  grid-column: 1 / -1;
+  background-image: linear-gradient(to right, rgb(70, 90, 44), #93ac39);
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  border-top: 2px solid rgb(97, 51, 20);
+}
+
+#section2 {
+  margin-top: 50px;
+ 
+}
+
+#section3 {
+  margin-top: 50px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.animated {
+  animation: 1s ease-in-out 0.1s 1 normal forwards running fadeDown;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeDown {
+0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  
+  text-decoration: none;
+  padding-bottom: 3px;
+   
+}
+  
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transform-origin: center;
+  transition: transform 0.25s ease-out;
+  background-color:rgb(97, 51, 20);
+}
+  
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
